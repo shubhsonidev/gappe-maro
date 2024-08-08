@@ -1,0 +1,19 @@
+<app-back>
+  <div
+    class="d-flex justify-content-start align-items-start gap-2 flex-column w-100"
+  >
+    <div>Enter your name</div>
+    <div class="input-group mb-3;" style="height: 3rem">
+      <input type="text" class="form-control" placeholder="John Doe...." />
+    </div>
+  </div>
+  <hr style="width: 100%" />
+  <div class="input-group mb-3;" style="height: 3rem">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter 6 digit OTP recieved"
+    />
+  </div>
+  <app-btn [routerLink]="'/home'"></app-btn>
+</app-back>
