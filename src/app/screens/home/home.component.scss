@@ -14,19 +14,18 @@
   font-size: 1rem;
 }
 
-hr {
-  height: 1.5px !important;
-  border: 0 none;
-  color: black;
-  background-color: black;
-  opacity: 30%;
-}
 .vertical-line {
   height: 100%;
   width: 1.5px;
   color: black;
   background-color: black;
   opacity: 30%;
+}
+
+.hl {
+  background-color: black;
+  opacity: 30%;
+  padding: 1px;
 }
 
 .input-group {
@@ -48,11 +47,32 @@ hr {
   outline: none;
 }
 
-.name-text {
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 10px;
+.user-cont {
+  height: 74vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
-.subname-text {
-  font-size: 0.9rem;
+
+.user-cont::-webkit-scrollbar {
+  display: none;
+}
+.user-cont {
+  scrollbar-width: none; /* Firefox */
+}
+.user-cont {
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.btn {
+  border: 1.5px solid #2e2c2a;
+  border-radius: 7px;
+  box-shadow: 3px 3px 0 #2e2c2a;
+
+  background-color: #bef0cd;
+  color: black !important;
+  height: 2.7rem;
+}
+.menu-btn {
+  background-color: transparent;
+  border: none;
 }

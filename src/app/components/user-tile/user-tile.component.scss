@@ -1,0 +1,12 @@
+.name-text {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 10px;
+}
+.subname-text {
+  font-size: 0.9rem;
+}
+.tile:hover {
+  background-color: #33333318;
+  transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}

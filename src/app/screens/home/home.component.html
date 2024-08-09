@@ -1,57 +1,104 @@
 <div
   style="height: 100vh"
-  class="d-flex justify-content-center align-items-center"
->
-  <div
-    class="head-cont d-flex justify-content-start align-items-start flex-column"
-  >
-    <div
-      class="d-flex justify-content-between align-items-center flex-row w-100"
-    >
-      <div class="head-text p-4">GAPPE MARO</div>
-      <div
-        class="d-flex justify-content-start gap-3 align-items-center flex-row p-4"
-      >
-        <div>John Doe</div>
-        <img
-          src="https://picsum.photos/200"
-          style="border-radius: 100%; width: 2rem; height: 2rem"
-        />
-        <i class="fa-solid fa-caret-down"></i>
-      </div>
-    </div>
-    <hr width="100%" class="m-0" />
+  class="d-flex justify-content-center align-items-center">
+  <div class="head-cont d-flex justify-content-start align-items-start flex-column">
+    <app-top-bar
+      [data]="{ name: 'Shubh Soni' }"
+      class="w-100"></app-top-bar>
+
+    <div class="hl w-100"></div>
     <div
       class="d-flex justify-content-start align-items-start"
-      style="height: 100%"
-    >
-      <div
-        class="p-4 d-flex justify-content-center align-items-center flex-column"
-      >
+      style="height: 100%; width: 100%">
+      <div class="p-4 d-flex justify-content-center align-items-center flex-column">
         <div
           class="input-group d-flex justify-content-center align-items-center mb-4"
-          style="height: 2.3rem"
-        >
+          style="height: 2.3rem">
           <i class="fa-solid ps-3 fa-magnifying-glass"></i>
-          <input type="text" class="form-control" placeholder="Search" />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search" />
         </div>
-        <div class="d-flex justify-content-start align-items-start gap-3 w-100" >
-          <div
-            class="d-flex justify-content-start align-items-center w-100 gap-2"
-          >
-            <img
-              src="https://picsum.photos/200"
-              style="border-radius: 100%; width: 2.5rem; height: 2.5rem"
-            />
-            <div>
-              <div class="name-text fw-bold">John Doe</div>
-              <div class="subname-text text-body-secondary">ss</div>
-            </div>
-          </div>
+        <div class="d-flex flex-column justify-content-start align-items-start gap-1 w-100 user-cont pb-3">
+          <app-user-tile style="width: 100%"></app-user-tile>
+          <app-user-tile style="width: 100%"></app-user-tile>
+          <app-user-tile style="width: 100%"></app-user-tile>
+          <app-user-tile style="width: 100%"></app-user-tile>
+          <app-user-tile style="width: 100%"></app-user-tile>
+          <app-user-tile style="width: 100%"></app-user-tile>
+          <app-user-tile style="width: 100%"></app-user-tile>
+          <app-user-tile style="width: 100%"></app-user-tile>
+          <app-user-tile style="width: 100%"></app-user-tile>
+          <app-user-tile style="width: 100%"></app-user-tile>
+          <app-user-tile style="width: 100%"></app-user-tile>
         </div>
       </div>
 
       <div class="vertical-line"></div>
+      <div
+        class="d-flex justify-content-between align-items-center flex-column"
+        style="height: 100%; width: 100%">
+        <div class="chat-cont d-flex justify-content-center align-items-center flex-column w-100">
+          <div class="d-flex px-3 pt-3 justify-content-between align-items-center w-100">
+            <app-user-tile></app-user-tile>
+
+            <div class="dropdown">
+              <button
+                class="menu-btn"
+                type="button"
+                id="dropdownMenuButton"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+                <i
+                  class="fa-solid fa-ellipsis"
+                  style="font-size: 1.3rem"></i>
+              </button>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="dropdownMenuButton">
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  >Action</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  >Another action</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  >Something else here</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="vertical-line mt-3 w-100"
+            style="padding: 1px"></div>
+        </div>
+        <div class="p-3">ssssss</div>
+        <div class="d-flex p-3 gap-3 justify-content-center align-items-center flex-row w-100">
+          <div
+            class="input-group d-flex justify-content-center align-items-center mb-4"
+            style="height: 2.7rem">
+            <i class="fa-regular ps-3 fa-comments"></i>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Lets chat..." />
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-success mb-4">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -8,6 +8,8 @@ import { BackComponent } from './screens/back/back.component';
 import { OtpComponent } from './screens/otp/otp.component';
 import { BtnComponent } from './components/btn/btn.component';
 import { HomeComponent } from './screens/home/home.component';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { UserTileComponent } from './components/user-tile/user-tile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HomeComponent } from './screens/home/home.component';
     BackComponent,
     OtpComponent,
     BtnComponent,
-    HomeComponent
+    HomeComponent,
+    TopBarComponent,
+    UserTileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+.head-cont {
+  height: 96vh;
+  width: 97vw;
+  border: 2.5px solid #2e2c2a;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #eddfd0;
+}
+
+.head-text {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+.btn-secondary {
+  background-color: transparent;
+  color: black;
+  border: none;
+  font-size: 1.4rem;
+}
+
+.btn:active,
+.btn:focus:active,
+.btn.active,
+.btn:focus.active {
+  box-shadow: none;
+  outline: none;
+  background-image: none;
+  border-color: #ced4da;
+}
