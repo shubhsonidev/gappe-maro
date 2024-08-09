@@ -1,0 +1,29 @@
+.checked-cont {
+  width: 100%;
+  border: 1.2px solid #2e2c2a;
+  border-radius: 7px;
+  border-bottom: 3.5px solid #2e2c2a;
+  border-right: 3.5px solid #2e2c2a;
+  background-color: #bfa1ff;
+  color: black !important;
+  height: 5rem;
+}
+
+.name-text {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 16px;
+}
+.subname-text {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+.say-cont {
+  background-color: white;
+  border: 1.7px solid #2e2c2a;
+  border-radius: 9px;
+  width: 10rem;
+  letter-spacing: 2px;
+  font-size: 13px;
+}

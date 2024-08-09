@@ -76,3 +76,19 @@
   background-color: transparent;
   border: none;
 }
+
+.message-cont {
+  height: 68vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.message-cont::-webkit-scrollbar {
+  display: none;
+}
+.message-cont {
+  scrollbar-width: none; /* Firefox */
+}
+.message-cont {
+  -ms-overflow-style: none; /* IE and Edge */
+}

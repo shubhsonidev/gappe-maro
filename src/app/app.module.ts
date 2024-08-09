@@ -10,6 +10,9 @@ import { BtnComponent } from './components/btn/btn.component';
 import { HomeComponent } from './screens/home/home.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { UserTileComponent } from './components/user-tile/user-tile.component';
+import { RcvdTileComponent } from './components/rcvd-tile/rcvd-tile.component';
+import { SentTileComponent } from './components/sent-tile/sent-tile.component';
+import { CheckedContComponent } from './components/checked-cont/checked-cont.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { UserTileComponent } from './components/user-tile/user-tile.component';
     BtnComponent,
     HomeComponent,
     TopBarComponent,
-    UserTileComponent
+    UserTileComponent,
+    RcvdTileComponent,
+    SentTileComponent,
+    CheckedContComponent
   ],
   imports: [
     BrowserModule,
