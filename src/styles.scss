@@ -12,3 +12,26 @@
 .pointer {
   cursor: pointer;
 }
+
+.toast-error {
+  border: 1.5px solid #2e2c2a !important;
+  border-radius: 7px !important;
+  box-shadow: 3px 3px 0 #2e2c2a !important;
+  background-color: #ef476f !important;
+  color: white !important;
+}
+
+.toast-success {
+  border: 1.5px solid #2e2c2a !important;
+  border-radius: 7px !important;
+  box-shadow: 3px 3px 0 #2e2c2a !important;
+  background-color: #495f41 !important;
+  color: white !important;
+}
+.toast-info {
+  border: 1.5px solid #2e2c2a !important;
+  border-radius: 7px !important;
+  box-shadow: 3px 3px 0 #2e2c2a !important;
+  background-color: #26547c !important;
+  color: white !important;
+}
