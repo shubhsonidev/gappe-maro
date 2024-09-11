@@ -1,27 +1,88 @@
-# GappeFrontend
+# **Gappe Maro - Retro Chatting App**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+"Gappe Maro" is a retro-style real-time chatting app designed with simplicity and a nostalgic vibe. It allows users to connect with friends quickly through mobile number authentication, ensuring a smooth and secure chatting experience.
 
-## Development server
+## **Features**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- 📱 **Login via Mobile Number:** Users can log in using their phone numbers.
+- 🔒 **OTP Security:** Enhanced security with OTP-based login.
+- 📝 **Profile Customization:** Users can add their bio and email for personalization.
+- 💬 **Retro UI:** Minimal, user-friendly design with a nostalgic retro look.
 
-## Code scaffolding
+## **Live Demo**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Check out the live demo of **Gappe Maro** here: [Gappe Maro Live](#)  
+(*Please note that only the UI part is completed as it's still under development.*)
 
-## Build
+![Mockup Screenshot](https://raw.githubusercontent.com/shubhsonidev/gappemaro/main/1724728499760.jpeg)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## **Tech Stack**
 
-## Running unit tests
+- **Frontend:** Angular  
+- **Backend:** Express.js, Node.js, MongoDB  
+- **Authentication:** JWT for secure token-based authentication
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## **Getting Started**
 
-## Running end-to-end tests
+### **Prerequisites**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Node.js and npm installed on your machine.
+- Angular CLI installed globally via npm.
 
-## Further help
+### **Installation**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/shubhsonidev/gappe-maro.git
+    ```
+
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd gappe-maro
+    ```
+
+3. **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+### **Running the Application**
+
+1. **Start the development server:**
+
+    ```bash
+    ng serve
+    ```
+
+2. **Open your browser and navigate to:**
+
+    ```bash
+    http://localhost:4200/
+    ```
+
+## **Deployment**
+
+Gappe Maro will be hosted on Netlify (for the frontend) and Heroku (for the backend). To deploy your own version:
+
+1. **Create a Netlify and Heroku account if you don't have one.**
+2. **Connect your GitHub repository to Netlify and Heroku.**
+3. **Follow the deployment instructions provided by each platform.**
+
+## **Contributing**
+
+1. **Fork the repository.**
+2. **Create a new branch for your feature or bugfix.**
+3. **Commit your changes and push your branch to GitHub.**
+4. **Submit a pull request for review.**
+
+## **Acknowledgements**
+
+- **Inspired by retro design and simple communication.**
+- **Built with the power of Angular, Express.js, Node.js, and MongoDB.**
+
+## **Contact**
+
+For any questions or feedback, please contact **[shubhsoni.dev@gmail.com](mailto:shubhsoni.dev@gmail.com)** or connect with me on **[LinkedIn](https://www.linkedin.com/in/shubh-soni-7b8590225/)**
