@@ -11,10 +11,10 @@
 
 ## **Live Demo**
 
-Check out the live demo of **Gappe Maro** here: [Gappe Maro Live](#)  
+Check out the live demo of **Gappe Maro** here: [Gappe Maro Live](https://gappe-maro.netlify.app/login)  
 (*Please note that only the UI part is completed as it's still under development.*)
 
-![Mockup Screenshot](https://raw.githubusercontent.com/shubhsonidev/gappemaro/main/1724728499760.jpeg)
+![Mockup Screenshot](https://raw.githubusercontent.com/shubhsonidev/gappe-maro/main/1724728499760.jpeg)
 
 ## **Tech Stack**
 
