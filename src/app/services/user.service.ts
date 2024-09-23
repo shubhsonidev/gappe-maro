@@ -4,6 +4,7 @@ import { Observable, BehaviorSubject } from "rxjs";
 import { tap } from "rxjs/operators";
 import { CookieService } from "ngx-cookie-service";
 import { environment } from "../environments/environment";
+import { HttpHeaders } from "@angular/common/http";
 
 @Injectable({
   providedIn: "root",
@@ -16,7 +17,13 @@ export class UserService {
   constructor(private http: HttpClient, private cookieService: CookieService) {}
 
   getProfileInfo(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/profile`, { withCredentials: true }).pipe(
+    let token = localStorage.getItem("token");
+
+    const headers = new HttpHeaders({
+      authToken: `${token}`,
+    });
+
+    return this.http.get(`${this.apiUrl}/profile`, { headers: headers, withCredentials: true }).pipe(
       tap((data) => {
         this.profileData.next(data);
       })
@@ -35,6 +42,15 @@ export class UserService {
   }
 
   update(fullName: string, bio: string, email: string): Observable<any> {
-    return this.http.put(`${this.apiUrl}/update`, { fullName, bio, email }, { withCredentials: true });
+    let token = localStorage.getItem("token");
+
+    const headers = new HttpHeaders({
+      authToken: `${token}`,
+    });
+    return this.http.put(
+      `${this.apiUrl}/update`,
+      { fullName, bio, email },
+      { headers: headers, withCredentials: true }
+    );
   }
 }

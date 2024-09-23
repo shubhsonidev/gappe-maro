@@ -20,6 +20,7 @@ export class AuthService {
   }
 
   setTokenCookie(token: string) {
-    document.cookie = `token=${token}; Secure; SameSite=None; path=/`;
+    document.cookie = `token=${token};`;
+    localStorage.setItem("token", token);
   }
 }
