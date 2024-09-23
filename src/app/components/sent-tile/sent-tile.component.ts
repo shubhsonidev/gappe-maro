@@ -7,4 +7,9 @@ import { Component, Input } from "@angular/core";
 })
 export class SentTileComponent {
   @Input() msg: string = "";
+  @Input() timestamp: string = "";
+
+  time(timeData: any) {
+    return;
+  }
 }

@@ -1,11 +1,11 @@
 <div
-  class="d-flex justify-content-start align-items-center w-100 gap-2 tile w-100 px-1 py-1"
+  class="d-flex justify-content-start align-items-center w-100 gap-2 tile w-100 px-1 py-2"
   style="border-radius: 10px">
   <img
     src="https://picsum.photos/200"
     style="border-radius: 100%; width: 2.5rem; height: 2.5rem" />
   <div>
-    <div class="name-text fw-bold">John Doe</div>
-    <div class="subname-text text-body-secondary">ss</div>
+    <div class="name-text fw-bold">{{ data?.fullName }}</div>
+    <div class="subname-text text-body-secondary">{{ data?.mobileNumber }}</div>
   </div>
 </div>

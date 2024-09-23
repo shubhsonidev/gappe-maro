@@ -3,12 +3,16 @@
     class="d-flex justify-content-start align-items-center w-100 gap-2 tile w-100 px-3"
     style="border-radius: 10px">
     <img
-      src="https://picsum.photos/200"
+      [src]="searchData.profileImageURL"
       style="border-radius: 100%; width: 3rem; height: 3rem; border: 1.5px solid black" />
     <div>
-      <div class="name-text fw-bold">John Doe</div>
-      <div class="subname-text text-body-secondary">9340092324</div>
+      <div class="name-text fw-bold">{{ searchData.fullName }}</div>
+      <div class="subname-text text-body-secondary">{{ searchData.mobileNumber }}</div>
     </div>
   </div>
-  <div class="pointer say-cont mx-3 p-2 d-flex justify-content-center align-items-center">Say Hii! 👋</div>
+  <div
+    class="pointer say-cont mx-3 p-2 d-flex justify-content-center align-items-center"
+    (click)="sendHii(searchData._id)">
+    Say Hii! 👋
+  </div>
 </div>

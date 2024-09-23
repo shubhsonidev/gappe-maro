@@ -1,11 +1,19 @@
 <app-back>
-  <div class="input-group mb-3;" style="height: 3rem">
-    <span class="input-group-text" id="basic-addon1">@</span>
+  <div
+    class="input-group mb-3;"
+    style="height: 3rem">
+    <span
+      class="input-group-text"
+      id="basic-addon1"
+      >&#64;</span
+    >
     <input
-      type="text"
+      [(ngModel)]="mobileNumber"
+      type="number"
       class="form-control"
-      placeholder="Enter your mobile number"
-    />
+      onInput="this.value = this.value.slice(0, 10)"
+      (keyup.enter)="sendOtp()"
+      placeholder="Enter your mobile number" />
   </div>
-  <app-btn [routerLink]="'/otp'"></app-btn>
+  <app-btn (click)="sendOtp()"></app-btn>
 </app-back>

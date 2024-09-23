@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-between align-items-center flex-row w-100">
   <div class="head-text p-4">GAPPE MARO</div>
   <div class="d-flex justify-content-start gap-3 align-items-center flex-row p-4">
-    <div>{{ data.name }}</div>
+    <div>{{ data?.user?.fullName }}</div>
     <img
       src="https://picsum.photos/200"
       style="border-radius: 100%; width: 2rem; height: 2rem" />
@@ -25,14 +25,7 @@
           <a
             class="dropdown-item"
             href="#"
-            >Another action</a
-          >
-        </li>
-        <li>
-          <a
-            class="dropdown-item"
-            href="#"
-            >Something else here</a
+            >Logout</a
           >
         </li>
       </ul>
@@ -63,32 +56,96 @@
 
         <div class="d-flex flex-column justify-content-center align-items-center w-100">
           <img
-            src="https://picsum.photos/200"
+            [src]="data?.user?.profileImageURL"
             style="border-radius: 100%; width: 6rem; height: 6rem" />
 
-          <div class="name-text fw-bold mt-3">John Doe</div>
+          <div class="d-flex flex-row justify-content-between align-items-center mt-3">
+            <div
+              class="name-text fw-bold"
+              *ngIf="!nameToggle">
+              {{ data?.user?.fullName }}
+            </div>
+
+            <input
+              style="background: none; border: none; border-bottom: 1px solid"
+              [(ngModel)]="nameInput"
+              *ngIf="nameToggle"
+              type="email" />
+
+            <span
+              style="color: black"
+              (click)="nameToggle = !nameToggle"
+              ><i class="fa-solid fa-pen-to-square ms-1"></i
+            ></span>
+          </div>
 
           <div class="w-100 d-flex flex-column justify-content-start mt-5 px-4">
             <div class="fw-bolder">Email</div>
-            <div class="text-body-secondary">shubhsoni.dev@gmail.com</div>
+            <div class="d-flex flex-row justify-content-between">
+              <div
+                class="d-flex flex-row"
+                *ngIf="!emailToggle">
+                <div
+                  class="text-body-secondary"
+                  *ngIf="data?.user?.email">
+                  {{ data?.user?.email }}
+                </div>
+                <div
+                  class="text-body-secondary"
+                  *ngIf="!data?.user?.email">
+                  Not added
+                </div>
+              </div>
+              <input
+                style="background: none; border: none; border-bottom: 1px solid"
+                [(ngModel)]="emailInput"
+                *ngIf="emailToggle"
+                type="email" />
+
+              <span
+                style="color: black"
+                (click)="emailToggle = !emailToggle"
+                ><i class="fa-solid fa-pen-to-square ms-1"></i
+              ></span>
+            </div>
+
             <hr
               class="w-100"
               style="border-top: 2px solid; opacity: 100" />
             <div class="fw-bolder">Phone</div>
-            <div class="text-body-secondary">93400xxxxx</div>
+            <div class="text-body-secondary">{{ data?.user?.mobileNumber }}</div>
             <hr
               class="w-100"
               style="border-top: 2px solid; opacity: 100" />
             <div class="fw-bolder">Bio</div>
-            <div class="text-body-secondary">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, doloribus. Ea, repellat, vel adipisci
-              culpa, dolores fugit asperiores quaerat hic quasi architecto similique. Aliquam neque dolorum accusamus a,
-              itaque sunt.
-              <span style="color: black"><i class="fa-solid fa-pen-to-square"></i></span>
+            <div class="d-flex flex-row justify-content-between">
+              <div
+                class="text-body-secondary"
+                *ngIf="!bioToggle">
+                {{ data?.user?.bio }}
+              </div>
+
+              <input
+                style="background: none; border: none; border-bottom: 1px solid"
+                [(ngModel)]="bioInput"
+                *ngIf="bioToggle"
+                type="email" />
+
+              <span
+                style="color: black"
+                (click)="bioToggle = !bioToggle"
+                ><i class="fa-solid fa-pen-to-square ms-1"></i
+              ></span>
             </div>
             <hr
               class="w-100"
               style="border-top: 2px solid; opacity: 100" />
+          </div>
+          <div>
+            <app-btn
+              title="Save"
+              *ngIf="emailToggle || bioToggle"
+              (click)="update()"></app-btn>
           </div>
         </div>
       </div>

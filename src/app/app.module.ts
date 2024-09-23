@@ -16,6 +16,8 @@ import { CheckedContComponent } from "./components/checked-cont/checked-cont.com
 import { SideProfileComponent } from "./components/side-profile/side-profile.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ToastrModule } from "ngx-toastr";
+import { FormsModule } from "@angular/forms"; //
+import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,14 @@ import { ToastrModule } from "ngx-toastr";
     CheckedContComponent,
     SideProfileComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, ToastrModule.forRoot()],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    FormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

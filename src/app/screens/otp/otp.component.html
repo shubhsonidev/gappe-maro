@@ -1,19 +1,30 @@
 <app-back>
-  <div
-    class="d-flex justify-content-start align-items-start gap-2 flex-column w-100"
-  >
-    <div>Enter your name</div>
-    <div class="input-group mb-3;" style="height: 3rem">
-      <input type="text" class="form-control" placeholder="John Doe...." />
+  <div class="d-flex justify-content-start align-items-start gap-2 flex-column w-100">
+    <div *ngIf="!isExist">Enter your FullName</div>
+    <div
+      *ngIf="!isExist"
+      class="input-group mb-3;"
+      style="height: 3rem">
+      <input
+        [(ngModel)]="name"
+        type="text"
+        class="form-control"
+        placeholder="john Doe..." />
     </div>
   </div>
-  <hr style="width: 100%" />
-  <div class="input-group mb-3;" style="height: 3rem">
+  <hr
+    *ngIf="!isExist"
+    style="width: 100%" />
+  <div
+    class="input-group mb-3;"
+    style="height: 3rem">
     <input
-      type="text"
+      [(ngModel)]="otp"
+      type="number"
+      onInput="this.value = this.value.slice(0, 6)"
+      (keyup.enter)="verifyOtp()"
       class="form-control"
-      placeholder="Enter 6 digit OTP recieved"
-    />
+      placeholder="Enter 6 digit OTP here..." />
   </div>
-  <app-btn [routerLink]="'/home'"></app-btn>
+  <app-btn (click)="verifyOtp()"></app-btn>
 </app-back>

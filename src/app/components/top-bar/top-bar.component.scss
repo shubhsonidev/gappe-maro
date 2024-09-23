@@ -35,3 +35,12 @@
   font-weight: 600;
   line-height: 16px;
 }
+
+input:focus {
+  outline: none;
+}
+
+input {
+  width: 90%;
+  color: #212529bf;
+}

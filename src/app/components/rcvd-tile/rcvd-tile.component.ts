@@ -7,4 +7,5 @@ import { Component, Input } from "@angular/core";
 })
 export class RcvdTileComponent {
   @Input() msg: string = "";
+  @Input() timestamp: string = "";
 }

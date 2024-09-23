@@ -3,24 +3,31 @@
     src="https://picsum.photos/200"
     style="border-radius: 100%; width: 6rem; height: 6rem" />
 
-  <div class="name-text fw-bold mt-3">John Doe</div>
+  <div class="name-text fw-bold mt-3">{{ data?.fullName }}</div>
 
   <div class="w-100 d-flex flex-column justify-content-start mt-5 px-4">
     <div class="fw-bolder">Email</div>
-    <div class="text-body-secondary">shubhsoni94k@gmail.com</div>
+    <div
+      class="text-body-secondary"
+      *ngIf="data?.email">
+      {{ data?.email }}
+    </div>
+    <div
+      class="text-body-secondary"
+      *ngIf="!data?.email">
+      not added
+    </div>
     <hr
       class="w-100"
       style="border-top: 2px solid; opacity: 100" />
     <div class="fw-bolder">Phone</div>
-    <div class="text-body-secondary">93400xxxxx</div>
+    <div class="text-body-secondary">{{ data?.mobileNumber }}</div>
     <hr
       class="w-100"
       style="border-top: 2px solid; opacity: 100" />
     <div class="fw-bolder">Bio</div>
     <div class="text-body-secondary">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, doloribus. Ea, repellat, vel adipisci culpa,
-      dolores fugit asperiores quaerat hic quasi architecto similique. Aliquam neque dolorum accusamus a, itaque sunt.
-      <span style="color: black"><i class="fa-solid fa-pen-to-square"></i></span>
+      {{ data?.bio }}
     </div>
     <hr
       class="w-100"
